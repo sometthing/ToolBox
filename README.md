@@ -47,3 +47,6 @@ This ToolBox was created for educational purposes only. Don't use any of the too
 11. Go to discord server and type: $nuke | to strat the nuke / to stop the nuke type: $stoppp
 
 Download SQLmap from here: https://sqlmap.org/
+
+Pyhon3
+2021
