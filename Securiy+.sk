@@ -1,0 +1,8 @@
+on join:
+	set join message to "&6uuid of&r &4%player%&r &6is&r &b%uuid of player%&r &6and the  IP is&r &a%ip of player%&r"
+command /uuid <player>:
+	trigger:
+		send "&4%player%&r &6uuid is&r &b%uuid of player%&r"
+command /ip <player>:
+	trigger:
+		send "&4%player%&r &6IP is&r &a%ip of player%&r"
