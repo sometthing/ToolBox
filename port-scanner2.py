@@ -24,7 +24,13 @@ print("""
 """)
 
 ip = input("[+} Enter IP to scan for open ports: ")
-
+print(' <+> This is the IP ' + ip + ' for scan <+> ')
+rf = input("[+} Enter the start port: ")
+print(" <+> This is the first port to start " + rf + ' <+> ')
+rfi = int(rf)
+rl = input("[+} Enter the last port for scan: ")
+print(" <+> This is the last port for scan " + rl + " <+> ")
+rli = int(rl)
 
 def scan(ip, port):
     scanner = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -37,7 +43,6 @@ def scan(ip, port):
     except:
         pass
 
-
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-    for port in range(0, 65535):
+    for port in range(rfi, rli):
         executor.submit(scan, ip, port + 1)
