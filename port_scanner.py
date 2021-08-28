@@ -1,7 +1,14 @@
 import socket
 
 ip = input("[+} Enter IP to scan for open ports: ")
-port = range(0, 65535)
+print(' <+> This is the IP ' + ip + ' for scan <+> ')
+rf = input("[+} Enter the start port: ")
+print(" <+> This is the first port to start " + rf + ' <+> ')
+rfi = int(rf)
+rl = input("[+} Enter the last port for scan: ")
+print(" <+> This is the last port for scan " + rl + " <+> ")
+rli = int(rl)
+port = range(rfi, rli)
 print("""
 
 @====-===---========------=======--===-------=====---===--@
@@ -28,7 +35,6 @@ $_______+++++___++++++++++$
 
 """)
 
-
 def portscan(port):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -37,8 +43,7 @@ def portscan(port):
     except:
         return False
 
-
-for port in range(0, 65535):
+for port in range(rfi, rli):
     result = portscan(port)
     if result:
         print(" <+> Port {} is open!".format(port) + ' <+> ')
