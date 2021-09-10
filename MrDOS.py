@@ -98,11 +98,11 @@ if respP == "Y":
     print(Fore.RESET)
     thip = input(Fore.RED + " {<[?]>} Enter threads >}> " + Fore.BLUE)
     print(Fore.RESET)
-    print(Fore.YELLOW + " /{<!>}\ You entered " + Fore.BLUE + thip + Fore.YELLOW + "threads /{<!>}\ ")
+    print(Fore.YELLOW + " /{<!>}\ You entered " + Fore.BLUE + thip + Fore.YELLOW + " threads /{<!>}\ ")
     print(Fore.RESET)
     thipi = int(thip)
     if chose == '1':
-        print(Fore.YELLOW + " /{<!>}\ You choosed "+ Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM"+ Fore.YELLOW + " scan method /{<!>}\ ")
+        print(Fore.YELLOW + " /{<!>}\ You choosed "+ Fore.CYAN + "socket.AF_INET, socket.SOCK_DGRAM "+ Fore.YELLOW + " scan method /{<!>}\ ")
         print(Fore.RESET)
         time.sleep(1)
         def portscan(port1):
