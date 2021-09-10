@@ -21,6 +21,10 @@ print("""
 | Created by TheGhostRoot |
 !^+^^^^^^^+++++++++^^^^^^^!
 
+
+TOOLBOX WAS CREATED FOR EDUCATION PURPOSES ONLY. DON'T USE ANY OF THE TOOLS FOR MALICIOUS ACTIVITY. I AM NOT RESPONSIBLE FOR ANYTHING DONE BY ANY OF THOSE TOOLS. USE THEM AT YOUR OWN RISK!!!
+
+
 """)
 
 ip = input("[+} Enter IP to scan for open ports: ")
