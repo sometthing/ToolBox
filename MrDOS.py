@@ -29,6 +29,9 @@ print(Fore.RED)
 print(Style.DIM)
 print("""
 
+TOOLBOX WAS CREATED FOR EDUCATION PURPOSES ONLY. DON'T USE ANY OF THE TOOLS FOR MALICIOUS ACTIVITY. I AM NOT RESPONSIBLE FOR ANYTHING DONE BY ANY OF THOSE TOOLS. USE THEM AT YOUR OWN RISK!!!
+
+
 Created by 
   _______   __              _______   __                      __     _______                   __   
  |       | |  |--. .-----. |   _   | |  |--. .-----. .-----. |  |_  |   _   \ .-----. .-----. |  |_ 
