@@ -55,6 +55,9 @@ Created by
     to start the nuke | '''+cp+'''nuke
     to stop the nuke | '''+cp+'''stoppp
 
+
+  TOOLBOX WAS CREATED FOR EDUCATION PURPOSES ONLY. DON'T USE ANY OF THE TOOLS FOR MALICIOUS ACTIVITY. I AM NOT RESPONSIBLE FOR ANYTHING DONE BY ANY OF THOSE TOOLS. USE THEM AT YOUR OWN RISK!!!
+
  ''')
 
    await client.change_presence(activity=discord.Game(name=Ba))
