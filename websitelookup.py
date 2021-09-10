@@ -18,6 +18,9 @@ print("""
 ─██████──██████──██████─██████████████─████████████████─
 ────────────────────────────────────────────────────────
 
+
+TOOLBOX WAS CREATED FOR EDUCATION PURPOSES ONLY. DON'T USE ANY OF THE TOOLS FOR MALICIOUS ACTIVITY. I AM NOT RESPONSIBLE FOR ANYTHING DONE BY ANY OF THOSE TOOLS. USE THEM AT YOUR OWN RISK!!!
+
 """)
 host = input('[+} Enter web: ')
 #fetch the IP
