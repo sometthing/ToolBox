@@ -3,6 +3,9 @@ Ethernet 🌐 Internet Connection 📶 Enable And Disable in PC 🖥️. You Can
 It's Working Directly (Network & Internet Setting) From Your Adapter Option.
 Easily, Enable or Disable (Ethernet/Internet) Connection and More Network Setting and Features Available.
 
+TOOLBOX WAS CREATED FOR EDUCATION PURPOSES ONLY. DON'T USE ANY OF THE TOOLS FOR MALICIOUS ACTIVITY. I AM NOT RESPONSIBLE FOR ANYTHING DONE BY ANY OF THOSE TOOLS. USE THEM AT YOUR OWN RISK!!!
+
+
 # Support
 - Windows 7, 8, 10
 - Linux
