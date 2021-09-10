@@ -6,7 +6,7 @@ import json
 from colorama import Fore, Back, Style
 ips = {
 
-        "Your collection of ": "IPs"
+        "Your collection of ": "yIPs"
 }
 
 f = ips.values()
